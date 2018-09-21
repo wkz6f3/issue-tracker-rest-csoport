@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -25,12 +26,14 @@ public class Issue {
     private Integer id;
 
     @Column
+    @NotNull
     private String title;
 
     @Column
     private String description;
 
     @Column
+    @NotNull
     private String place;
 
     @Column
